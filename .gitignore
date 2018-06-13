@@ -1,0 +1,8 @@
+[Tt]humbs.db
+*.DS_Store
+
+/.history/
+/build/
+/coverage/
+/dist/
+/node_modules/

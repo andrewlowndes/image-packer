@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <canvas id="game" width="512" height="512" style="border: 1px solid black"></canvas>
+    
+    <script src="../lib/apl-image-packer.min.js"></script>
+    <script>
+      //test images
+      var imgs = [];
+      for (var i=0; i<1000; i++) {
+        var width = Math.round(10 + (Math.random() * 40)),
+          height = Math.round(10 + (Math.random() * 40));
+        
+        imgs.push({
+          width: width,
+          height: height,
+          colour: [Math.round(Math.random()*255), Math.round(Math.random()*255), Math.round(Math.random()*255)]
+        });
+      }
+      
+      var start = Date.now();
+      var atlas = ImagePacker.createAltas(imgs);
+      console.log(Date.now() - start + 'ms');
+      
+      //draw the arrangement of the images
+      var game = document.getElementById('game'),
+        g = game.getContext('2d');
+      
+      game.width = atlas.width;
+      game.height = atlas.height;
+      
+      game.style.width = atlas.width + 'px';
+      game.style.height = atlas.height + 'px';
+      
+      g.clearRect(0, 0, atlas.width, atlas.height);
+      
+      atlas.coords.forEach(function(atlasImg) {
+        var col = atlasImg.img.colour;
+        
+        g.fillStyle = 'rgb(' + col[0] + ',' + col[1] + ',' + col[2] +')';
+        g.fillRect(atlasImg.x, atlasImg.y, atlasImg.img.width, atlasImg.img.height);
+      });
+      
+      console.log(atlas.coords.length, imgs.length);
+    </script>
+  </body>
+</html>
