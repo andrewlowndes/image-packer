@@ -90,6 +90,7 @@ Links back to the dimension object provided, defines the x and y position to ins
 |---|---|---|
 | x | number | The x position to insert into the atlas (from the left) |
 | y | number | The y position to insert into the atlas (from the top) |
+| img | ImagePackerDimension | The original object that was given with the dimensions (can contain more properties) |
 
 ### Classes
 

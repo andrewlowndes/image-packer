@@ -1,6 +1,6 @@
 {
   "name": "apl-image-packer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple fast bin packer for use with anything with dimensions",
   "keywords": [
     "image-packer",
