@@ -2,4 +2,4 @@ export { ImagePackerDimension } from "./ImagePacker/interfaces/ImagePackerDimens
 export { ImagePackerCoord } from "./ImagePacker/interfaces/ImagePackerCoord";
 export { ImagePackerAtlas } from "./ImagePacker/interfaces/ImagePackerAtlas";
 
-export { ImagePacker } from "./ImagePacker/ImagePacker";
+export { ImagePacker, createAtlas } from "./ImagePacker/ImagePacker";

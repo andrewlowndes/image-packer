@@ -13,16 +13,24 @@ A lightweight function that takes a set of dimensions and packs them as best it 
 
 ```typescript
 
-import { ImagePacker } from 'apl-image-packer';
+import { createAtlas } from 'apl-image-packer';
 
-const atlas = ImagePacker.createAtlas([
+interface customObj {
+  width: number;
+  height: number;
+  name: string;
+}
+
+const atlas = createAtlas<customObj>([
   {
     width: 100,
-    height: 200
+    height: 200,
+    name: 'one'
   },
   {
     width: 450,
-    height: 300
+    height: 300,
+    name: 'two'
   }
 ]);
 
@@ -53,7 +61,7 @@ const atlas = ImagePacker.createAtlas([
 ## Using in node
 Install via `npm install apl-image-packer`, then import via ES6 Modules:
 ```typescript
-import { ImagePacker } from 'apl-image-packer';
+import { createAtlas } from 'apl-image-packer';
 ```
 
 ## Using in the browser
@@ -99,7 +107,7 @@ The main class used to create the atlas
 
 | Method | Description | Paramaters | Return Type |
 |---|---|---|---|
-| createAltas | Creates the atlas from the provided list of dimensions | imgs: Array\<ImagePackerDimension\> | atlas: ImagePackerAtlas |
+| createAtlas | Creates the atlas from the provided list of dimensions | imgs: Array\<ImagePackerDimension\> | atlas: ImagePackerAtlas |
 
 ## Licence
 All code is licenced under MIT.

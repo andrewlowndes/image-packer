@@ -1,6 +1,7 @@
 import { ImagePackerCoord } from "./ImagePackerCoord";
-export interface ImagePackerAtlas {
-    coords: Array<ImagePackerCoord>;
+import { ImagePackerDimension } from "./ImagePackerDimension";
+export interface ImagePackerAtlas<T extends ImagePackerDimension = ImagePackerDimension> {
+    coords: Array<ImagePackerCoord<T>>;
     width: number;
     height: number;
 }

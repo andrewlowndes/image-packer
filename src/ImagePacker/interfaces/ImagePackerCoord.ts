@@ -1,7 +1,7 @@
 import { ImagePackerDimension } from "./ImagePackerDimension";
 
-export interface ImagePackerCoord {
+export interface ImagePackerCoord<T extends ImagePackerDimension = ImagePackerDimension> {
   x: number;
   y: number;
-  img: ImagePackerDimension;
+  img: T;
 }

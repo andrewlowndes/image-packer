@@ -24,17 +24,16 @@
   "author": "Andrew Lowndes",
   "license": "MIT",
   "devDependencies": {
-    "@types/jasmine": "^2.8.8",
-    "http-server": "^0.11.1",
-    "jasmine-core": "^3.1.0",
-    "karma": "^2.0.2",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-jasmine": "^1.1.2",
-    "karma-typescript": "^3.0.12",
-    "systemjs": "^0.21.4",
-    "ts-loader": "^4.4.1",
-    "typescript": "^2.9.1",
-    "webpack": "^4.12.0",
-    "webpack-cli": "^2.1.5"
+    "@types/jasmine": "^2.8.11",
+    "http-server": "*",
+    "jasmine-core": "^3.3.0",
+    "karma": "^3.1.1",
+    "karma-chrome-launcher": "*",
+    "karma-jasmine": "^2.0.0",
+    "karma-typescript": "^3.0.13",
+    "ts-loader": "^5.3.0",
+    "typescript": "^3.1.6",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
   }
 }
